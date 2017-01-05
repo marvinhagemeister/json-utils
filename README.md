@@ -7,10 +7,10 @@ is about 5-7% faster than [lodash.merge](https://www.npmjs.com/package/lodash.me
 
 ```bash
 # npm
-npm install json-utils
+npm install json-utils-optimized
 
 # or yarn
-yarn install json-utils
+yarn install json-utils-optimized
 ```
 
 ## API
