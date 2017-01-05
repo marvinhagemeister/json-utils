@@ -3,7 +3,7 @@ export interface PlainJSON {
   [key: string]: Value | Value[];
 }
 
-export function deepMerge(...sources: PlainJSON[]) {
+export function deepMerge(...sources: PlainJSON[]): PlainJSON {
   const res = {};
   const len = sources.length;
   for (let i = 0; i < len; i++) {
