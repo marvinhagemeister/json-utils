@@ -1,9 +1,8 @@
-export type Value = PlainJSON | string | number | boolean;
-export interface PlainJSON {
-  [key: string]: Value | Value[];
+interface Object {
+  __proto__?: any;
 }
 
-export function deepMerge(...sources: PlainJSON[]): PlainJSON {
+export function deepMerge(...sources: Object[]): Object {
   const res = {};
   const len = sources.length;
   for (let i = 0; i < len; i++) {
@@ -13,7 +12,7 @@ export function deepMerge(...sources: PlainJSON[]): PlainJSON {
         && typeof res[prop] === "object" && typeof source[prop] === "object"
         && !Array.isArray(res[prop]) && !Array.isArray(source[prop])
       ) {
-        res[prop] = deepMerge(res[prop], source[prop] as PlainJSON);
+        res[prop] = deepMerge(res[prop], source[prop]);
       } else {
         res[prop] = source[prop];
       }
@@ -22,3 +21,13 @@ export function deepMerge(...sources: PlainJSON[]): PlainJSON {
 
   return res;
 };
+
+/**
+ * Merge two objects by copying the prototype. Use this
+ * only on objects you have created yourself to prevent
+ * hard to track down bugs!
+ */
+export function protoMerge(a: Object, b: Object): Object {
+  b.__proto__ = a;
+  return b;
+}
