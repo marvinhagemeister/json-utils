@@ -24,11 +24,11 @@ export function deepMerge(...sources: Object[]): Object {
 };
 
 /**
- * Merge two objects by copying the prototype. Use this
+ * Shallow merge two objects by copying the prototype. Use this
  * only on objects you have created yourself to prevent
  * hard to track down bugs!
  */
-export function protoMerge(a: Object, b: Object): Object {
+export function protoMerge(a: any, b: any): any {
   b.__proto__ = a;
   return b;
 }
