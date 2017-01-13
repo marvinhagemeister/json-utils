@@ -5,7 +5,7 @@
     "noImplicitAny": false,
     "sourceMap": true,
     "pretty": true,
-    "declaration": false,
+    "declaration": true,
     "outDir": "dist/"
   },
   "exclude": [

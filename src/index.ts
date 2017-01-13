@@ -1,7 +1,8 @@
-interface Object {
+export interface Object {
   __proto__?: any;
 }
 
+/** Deeply merge two objects */
 export function deepMerge(...sources: Object[]): Object {
   const res = {};
   const len = sources.length;
