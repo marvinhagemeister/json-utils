@@ -17,7 +17,13 @@ yarn install json-utils-optimized
 
 ### `deepMerge(...objs)`
 
-Deeply merge an arbitrary number of plain objects. For shallow merging use `Object.assign` instead.
+Deeply merge an arbitrary number of plain objects.
+
+### `protoMerge(a, b)`
+
+Shallow merge `a` into `b` by swapping prototype references. This is a lot faster than
+the native `Object.assign`. Note that this should only be used when you
+have full control over both objects.
 
 ## License
 

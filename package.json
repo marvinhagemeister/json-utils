@@ -1,6 +1,6 @@
 {
   "name": "json-utils-optimized",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Helper functions when dealing with plain objects",
   "main": "dist/index.js",
   "module": "es/index.js",
