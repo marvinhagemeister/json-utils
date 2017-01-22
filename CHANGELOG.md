@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+
+Add function to retrieve an object key by its value.
+
 ## 1.1.0
 
 Add `protoMerge` strategy to shallow merge to objects. This works by replacing

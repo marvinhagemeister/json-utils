@@ -25,6 +25,10 @@ Shallow merge `a` into `b` by swapping prototype references. This is a lot faste
 the native `Object.assign`. Note that this should only be used when you
 have full control over both objects.
 
+### `getKeyByValue(obj, value)`
+
+Get an objects key by its value. Only works on shallow objects.
+
 ## License
 
 MIT, see `LICENSE.md`.
