@@ -4,7 +4,7 @@
   "description": "Helper functions when dealing with plain objects",
   "main": "dist/index.js",
   "module": "es/index.js",
-  "typings": "index.d.ts",
+  "typings": "dist/index.d.ts",
   "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
   "license": "MIT",
   "scripts": {
