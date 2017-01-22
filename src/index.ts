@@ -28,3 +28,12 @@ export function protoMerge(a: any, b: any): any {
   b.__proto__ = a;
   return b;
 }
+
+/** Get object key by object value. Only works on shallow objects. */
+export function getKeyByValue(obj: Object, value: number | string): string | undefined {
+  for (let prop in obj) {
+    if (obj[prop] === value) {
+      return prop;
+    }
+  }
+}
