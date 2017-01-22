@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+Fix wrong typings path in `package.json`.
+
 ## 1.2.0
 
 Add function to retrieve an object key by its value.
